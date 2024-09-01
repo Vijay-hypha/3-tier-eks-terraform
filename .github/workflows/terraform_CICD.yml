@@ -41,8 +41,8 @@ jobs:
         run: terraform plan
         continue-on-error: true # If you want to continue even if the plan fails (for logging purposes)
 
-      - name: Terraform apply
-        run: terraform apply -auto-approve
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve
 
       - name: Install EBS CSI Driver
         run: |
